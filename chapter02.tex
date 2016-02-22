@@ -104,18 +104,22 @@ $\lvert\lbrace n \in \mathbb{N} \mid n \leqslant 5 \rbrace \rvert =
 
 
 \exercise{2.3.2.7}
-\begin{tikzpicture}[->,>=stealth,shorten >=10pt,shorten <=10pt,auto]
-  \node [shape=rectangle,draw,text width=4cm] (R)
+\begin{tikzpicture}
+  \node [type,text width=4cm] (R)
   {
     a pair $(p,c)$, where $p$ is a person, $c$ is a child, and $p$ has
     $c$ as a child
   };
-  \node [shape=rectangle,draw,below left=of R] (P) {a person};
-  \node [shape=rectangle,draw,below right=of R] (C) {a child};
+  \node [type,below left=of R] (P) {a person};
+  \node [type,below right=of R] (C) {a child};
 
-  \path (R) edge node {p} (P)
-            edge node {c} (C);
+  \path (R) edge [aspect] node {p} (P)
+            edge [aspect] node {c} (C);
 \end{tikzpicture}
+
+
+\exercise{2.3.3.1}
+
 
 
 %%% Local Variables:
