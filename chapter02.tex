@@ -119,7 +119,32 @@ $\lvert\lbrace n \in \mathbb{N} \mid n \leqslant 5 \rbrace \rvert =
 
 
 \exercise{2.3.3.1}
+\begin{tikzpicture}
+  \matrix [row sep=4em, column sep=4em, every node/.style=type]
+  {
+    \node (M)  {a mother}; & &
+    \node (C)  {a child};  & &
+    \node (F)  {a father}; \\ &
+    \node (W)  {a woman};  & &
+    \node (M') {a man};    & \\ & &
+    \node (P)  {a person}; & & \\ & &
+    \node (P') {a parent}; & & \\
+  };
 
+  \path [every edge/.style=aspect]
+  (C)  edge              node [above]     {has} (M)
+       edge              node [above]     {has} (F)
+       edge              node [right]     {is}  (P)
+  (M)  edge              node [above]     {is}  (W)
+       edge [bend right] node [below]     {is}  (P')
+  (W)  edge              node [above]     {is}  (P)
+  (P') edge              node [left]      {is}  (P)
+  (W)                    node [below=2em] {\checkmark}
+  (F)  edge              node [above]     {is}  (M')
+       edge [bend left]  node [below]     {is}  (P')
+  (M') edge              node [above]     {is}  (P)
+  (M')                   node [below=2em] {\checkmark};
+\end{tikzpicture}
 
 
 %%% Local Variables:
