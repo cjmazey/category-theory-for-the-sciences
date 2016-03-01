@@ -187,6 +187,45 @@ $P(x) = Q(x)$.
 No; the area code is fixed but the region the cell phone is in may vary.
 
 
+\exercise{2.3.3.9}
+\paragraph{a.}
+not clearly useful as an image type
+\paragraph{b.}
+\begin{tikzpicture}
+  \matrix [types]
+  {
+    \node (P) {a working process of type $T$}; & &
+    \node (M) {a material}; \\
+  };
+  \path [aspects]
+  (P) edge node [above] {fabricates} (M);
+\end{tikzpicture}
+\paragraph{c.}
+\begin{tikzpicture}
+  \matrix [types]
+  {
+    \node (B) {a bicycle}; & &
+    \node (P) {a person}; \\
+  };
+  \path [aspects]
+  (B) edge node [above] {is owned by} (P);
+\end{tikzpicture}
+\paragraph{d.}
+not clearly useful as an image type
+\paragraph{e.}
+not clearly useful as an image type
+\paragraph{f.}
+\begin{tikzpicture}
+  \matrix [types]
+  {
+    \node (P) {a person}; & &
+    \node (R) {a residence}; \\
+  };
+  \path [aspects]
+  (P) edge node [above] {lives primarily at} (R);
+\end{tikzpicture}
+
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "exercises"
