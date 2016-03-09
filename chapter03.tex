@@ -35,6 +35,41 @@ Here is a relationship between them:
 \end{equation*}
 
 
+\exercise{3.1.1.14}
+\paragraph{a.}
+\begin{equation*}
+  s \colon X \times Y \to Y \times X \coloneqq
+  \left\langle \pi_2 , \pi_1 \right\rangle \,.
+\end{equation*}
+\paragraph{b.}
+\begin{thm}
+  The swap map $s$ above is an isomorphism.
+\end{thm}
+\begin{proof}
+  Note that
+  \begin{align*}
+    \left\langle p_2 , p_1 \right\rangle \cdot
+    \left\langle \pi_2 , \pi_1 \right\rangle \cdot
+    p_2
+    &= \left\langle p_2 , p_1 \right\rangle \cdot
+      \pi_1 \\
+    &= p_2
+  \end{align*}
+  and similarly with $p_1$ and $\pi_2$.
+
+  The universal property for products with
+  $p_1$ and $p_2$ implies that
+  \begin{equation*}
+    \left\langle p_2 , p_1 \right\rangle \cdot
+    \left\langle \pi_2 , \pi_1 \right\rangle =
+    \id{Y \times X}
+  \end{equation*}
+  by unicity.
+
+  The other direction is similar.
+\end{proof}
+
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "exercises"
