@@ -3,12 +3,16 @@
 \includeonly{chapter02,chapter03}
 
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage{tikz}
-\usetikzlibrary{positioning}
 \usepackage{wasysym}
+\usetikzlibrary{positioning}
 
-\newcommand{\exercise}[1] {\subsection*{Exercise #1}}
+\newcommand{\exercise}[1]{\subsection*{Exercise #1}}
+\newcommand{\Hom}[1]{\mathrm{Hom}_{\mathbf{#1}}}
+
+\newtheorem*{thm}{Theorem}
 
 \let\oldemptyset\emptyset{}
 \let\emptyset\varnothing{}
