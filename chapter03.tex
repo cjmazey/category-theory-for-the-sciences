@@ -91,6 +91,30 @@ X \sqcup Y \cong \mathbb{Z}$.
 $\Hom{Set}(X,A) \times \Hom{Set}(Y,A) \cong \Hom{Set}(X \sqcup Y,A)$
 
 
+\exercise{3.1.2.15}
+Let $c,d$ be objects.  Then
+\begin{equation*}
+  \llangle c \sqcup d \rrangle \coloneqq
+  \textrm{``either $\llangle c \rrangle$, labled as such, or $\llangle
+    d \rrangle$, labled as such.''}
+\end{equation*}
+
+The inclusions $c \rightarrow c \sqcup d \leftarrow d$ may be read
+``is, when appropriately labled.''
+
+\begin{tikzpicture}
+  \matrix [types]
+  {
+    \node (W) {a wav file}; &
+    \node (A) {an audio file}; &
+    \node (M) {an mp3 file}; \\
+  };
+  \path [aspects]
+  (W) edge node [above] {is, with the ``.wav'' extension} (A)
+  (M) edge node [above] {is, with the ``.mp3'' extension} (A);
+\end{tikzpicture}
+
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "exercises"
