@@ -101,17 +101,17 @@ Let $c,d$ be objects.  Then
 
 The inclusions $c \rightarrow c \sqcup d \leftarrow d$ may be read
 ``is, when appropriately labled.''
-
+\newline\newline
 \begin{tikzpicture}
   \matrix [types]
   {
-    \node (W) {a wav file}; &
-    \node (A) {an audio file}; &
+    \node (W) {a wav file}; & &
+    \node (A) {an audio file}; & &
     \node (M) {an mp3 file}; \\
   };
   \path [aspects]
-  (W) edge node [above] {is, with the ``.wav'' extension} (A)
-  (M) edge node [above] {is, with the ``.mp3'' extension} (A);
+  (W) edge node [above,text width=2cm] {is, with the\\``.wav''\\extension} (A)
+  (M) edge node [above,text width=2cm] {is, with the\\``.mp3''\\extension} (A);
 \end{tikzpicture}
 
 
