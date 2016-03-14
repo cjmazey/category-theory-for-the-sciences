@@ -123,7 +123,30 @@ The inclusions $c \rightarrow c \sqcup d \leftarrow d$ may be read
 
 
 \exercise{3.2.1.3}
-
+\paragraph{a.}
+\begin{tikzpicture}[every node/.style={node distance=2mm}]
+  \node [green] (x1) at (0,0) {$x_1$};
+  \node [red,above left=of x1] (x2) {$x_2$};
+  \node [red,above right=of x1] (x3) {$x_3$};
+  \node [blue,below left=of x1] (x4) {$x_4$};
+  \node [green,below right=of x1] (x5) {$x_5$};
+  \node [green,right=3cm of x1] (y1) {$y_1$};
+  \node [blue,above=of y1]  (y2) {$y_2$};
+  \node [green,below=of y1] (y3) {$y_3$};
+  \node [draw=gray,ellipse,fit=(x1) (x2) (x3) (x4) (x5)] {};
+  \node [draw=gray,ellipse,fit=(y1) (y2) (y3)] {};
+\end{tikzpicture}
+\paragraph{b.}
+\begin{tikzpicture}
+  \matrix
+  {
+    & \node{$x_1$}; & \node{$x_2$}; & \node{$x_3$}; & \node{$x_4$}; &
+    \node{$x_5$}; \\
+    \node{$y_1$}; & \node[fill=green]{}; & & & & \node[fill=green]{}; \\
+    \node{$y_2$}; & & & & \node[fill=blue]{};  & \\
+    \node{$y_e$}; & \node[fill=green]{}; & & & & \node[fill=green]{}; \\
+  };
+\end{tikzpicture}
 
 
 %%% Local Variables:
